@@ -1,0 +1,104 @@
+<!doc type HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<title>
+StockMarketApplication
+</title>
+<style>
+.header{
+background-color: rgb(2, 0, 7);
+  color: rgb(240, 239, 241);
+  padding: 19px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: palegoldenrod;
+}
+
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: rgb(14, 158, 177);
+  text-align: center;
+  
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: aqua;
+}
+
+.bg-image{
+
+background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.footer {
+  background-color: #968766;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 600px){
+	.col-s-1 {width: 8.33%;}
+	.col-s-2 {width: 16.66%;}
+}
+@media only screen and (min-width: 750px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  }
+ 
+ 
+</style>
+<style>
+  body {
+    background-image: url('..\images\download,jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+  }
+  </style>
+  
+</head>
+<body>
+<div class="header">
+<h1 align="center"><b>Stock Market</b></h1>
+</div>
+<div>
+<ul>  
+  <li ><a href="/SignUp"><b>SignUp</b></a></li>
+  <li ><a href="/LogIn"><b>LogIn</b></a></li>
+ <!-- <li><a href="#About"><b>About</b></a></li>-->
+  <li><a href="#Home"><b>Home</b></a></li>
+</ul>
+</div>
+
+<!--<div  class="bg-image">
+  <img src="E:\javaNode\Angular\StockMarket\download.jpg" alt="This is a image">
+</div>
+<div class="footer">
+<p > @2020 Copyrights stock market , all rights reserved</p>
+</div>-->
+</body>
+</html>
+
+<router-outlet></router-outlet>

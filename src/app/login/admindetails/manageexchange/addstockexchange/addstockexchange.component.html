@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <title>Add Exchange</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            color: #fff;
+            background-image: url("https://www.sharegurukul.com/wp-content/uploads/2019/05/stock-market-courses-for-beginners.jpg");
+            background-repeat: no-repeat;
+            background-size: 1400 px 700px;
+        }
+
+        .form-control,
+        .form-control:focus,
+        .input-group-addon {
+            border-color: #e1e1e1;
+        }
+
+        .form-control,
+        .btn {
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" align="center">
+        <div [hidden]="submitted" style="width: 400px;">
+            <form [formGroup]="companysaveform" #saveCompany1 (ngSubmit)="saveCompany(saveCompany1)">
+                <h2>Add StockExchange</h2>
+                <hr>
+                <div class="form-group">
+                    <div class="input-group">Stock ID
+                        <input type="number" class="form-control" formControlName="StockId" placeholder="StockId"
+                            required="required">
+                        <div class="alert alert-danger" *ngIf="(id3.touched) && (id3.invalid)"
+                            style="margin-top: 5px;">
+                            <span *ngIf="id3.errors.required">Stock ID is Required</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">Stock Exchange
+                        <input type="text" class="form-control" formControlName="stockExchange" placeholder="StockExchange"
+                            required="required">
+                        <div class="alert alert-danger" *ngIf="(stockExchange.touched) && (stockExchange.invalid)"
+                            style="margin-top: 5px;">
+                            <span *ngIf="stockExchange.errors.required">Stock Exchange is Required</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">Breaf
+                        <input type="text" class="form-control" formControlName="breaf" placeholder="Breaf"
+                            required="required">
+                        <div class="alert alert-danger" *ngIf="(breaf.touched) && (breaf.invalid)"
+                            style="margin-top: 5px;">
+                            <span *ngIf="breaf.errors.required">Breaf is Required</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">Contact Address
+                        <input type="text" class="form-control" formControlName="contactAddress" placeholder="Contact Address"
+                            required="required">
+                        <div class="alert alert-danger" *ngIf="(contactAddress.touched)&& (contactAddress.invalid) " style="margin-top: 5px;">
+                            <span *ngIf="contactAddress.errors.required">Address and Phone is Required</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">Any Remarks
+                        <input type="text" class="form-control" formControlName="remarks" placeholder="Remarks"
+                            required="required">
+                        <div class="alert alert-danger" *ngIf="(remarks.touched)&&(remarks.invalid)"
+                            style="margin-top: 5px;">
+                            <span *ngIf="remarks.errors.required">Remarks is Required</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div [hidden]="!submitted">
+        <button (click)="stockExchangeDataFieldssaveform()"></button>
+    </div>
+</body>
+
+</html>
